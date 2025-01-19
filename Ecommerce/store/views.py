@@ -76,3 +76,10 @@ def updateItem(request):
 		orderItem.delete()
 
 	return JsonResponse('Item was added', safe=False)
+
+
+
+
+def placeOrder(request):
+	print('Data :',request.body)
+	return JsonResponse('payment success', safe=False)
