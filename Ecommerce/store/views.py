@@ -54,8 +54,9 @@ def updateItem(request):
 	data = json.loads(request.body)
 	productId = data['productId']
 	action = data['action']
-	print('Action:', action)
+	
 	print('Product:', productId)
+	print('Action:', action)
 
 	customer = request.user.customer
 	product = Product.objects.get(id=productId)
