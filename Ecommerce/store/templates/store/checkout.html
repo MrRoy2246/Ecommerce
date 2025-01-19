@@ -50,7 +50,7 @@
 		
 		<div class="col-lg-6">		
 			<div class="box-element">
-				<a  class="btn btn-outline-dark" href="{{  item.product.imageURL }}">&#x2190; Back to Cart</a>
+				<a  class="btn btn-outline-dark" href="">&#x2190; Back to Cart</a>
 				<hr>
 				<h3>Order Summary</h3>
 				<hr>
@@ -77,4 +77,12 @@
 			</div>
 		</div>
 	</div>
+
+	<script type="text/javascript">
+		var shipping = '{{order.shipping}}'
+
+		if (shipping == 'False'){
+		 	document.getElementById('shipping-info').innerHTML = ''
+		}
+	</script>
 {% endblock content %}
